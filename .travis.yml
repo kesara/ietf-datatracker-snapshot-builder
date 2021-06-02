@@ -1,0 +1,5 @@
+before_install:
+  - sudo apt-get install -y subversion
+
+script:
+  - scripts/create-snapshot.sh
