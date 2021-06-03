@@ -5,5 +5,11 @@ services:
 before_install:
   - sudo apt-get install -y subversion
 
+env:
+  global:
+    - CODEREPO=https://svn.ietf.org/svn/tools/ietfdb/trunk
+    - CODEDIR=trunk
+
 script:
-  - scripts/create-snapshot.sh
+  - scripts/setup-snapshot.sh
+  - travis_wait 30 scripts/copy-snapshot.sh

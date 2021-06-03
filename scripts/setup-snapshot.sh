@@ -1,8 +1,6 @@
 #!/bin/bash
 
 SCRIPTDIR=$PWD/scripts
-CODEDIR=trunk
-CODEREPO=https://svn.ietf.org/svn/tools/ietfdb/$CODEDIR
 REPO=ietf/datatracker-environment
 TAG=latest
 WHO=$(whoami)
@@ -39,8 +37,4 @@ docker run -ti --entrypoint $PARENT/$CODEDIR/init.sh \
     -e TAG="$TAG" -e FILEDIR="$FILEDIR" -e UID="$WHOUID" \
     -e GID="$WHOGID" "$REPO:$TAG"
 
-# copy db
-echo "Running copydb"
-docker/copydb -v
-
-echo "done!"
+echo "Finished setting up snapshot"
