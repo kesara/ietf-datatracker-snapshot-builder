@@ -9,6 +9,8 @@ env:
   global:
     - CODEREPO=https://svn.ietf.org/svn/tools/ietfdb/trunk
     - CODEDIR=trunk
+    - UPSTREAMSERVER=ietfa.amsl.com
+    - UPSTREAMPATH=/a/www/www6s/lib/dt/sprint/
 
 script:
   - scripts/setup-snapshot.sh
