@@ -1,0 +1,17 @@
+---
+services:
+  - docker
+
+before_install:
+  - sudo apt-get install -y subversion
+
+env:
+  global:
+    - CODEREPO=https://svn.ietf.org/svn/tools/ietfdb/trunk
+    - CODEDIR=trunk
+    - UPSTREAMSERVER=ietfa.amsl.com
+    - UPSTREAMPATH=/a/www/www6s/lib/dt/sprint/
+
+script:
+  - scripts/setup-snapshot.sh
+  - travis_wait 30 scripts/copy-snapshot.sh
