@@ -1,6 +1,6 @@
 # IETF datatracker database snapshot builder
 
-![main branch build status](https://api.travis-ci.com/kesara/ietf-datatracker-snapshot-builder.svg?branch=main)
+[![main branch build status](https://api.travis-ci.com/kesara/ietf-datatracker-snapshot-builder.svg?branch=main)](https://travis-ci.com/github/kesara/ietf-datatracker-snapshot-builder)
 
 This repository builds and uploads latest database snapshot for
 [IETF Datatracker](https://datatracker.ietf.org/).
