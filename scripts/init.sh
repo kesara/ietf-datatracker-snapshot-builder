@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# This script is based on original docker/docker-init.sh from IETF datatracker
+# Source: https://trac.ietf.org/trac/ietfdb/browser/trunk/docker/docker-init.sh
+# License: https://trac.ietf.org/trac/ietfdb/browser/trunk/LICENSE
+# Copyright (c) 2008,2018, The IETF Trust
+
 echo "Running custom entry script!"
 
 # A little bit of setup
